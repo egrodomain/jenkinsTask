@@ -13,7 +13,12 @@ pipeline {
                     sh "ls -lart target"
                          }
                      }
-           
+            stage('Archive Artifacts') {
+                steps {
+                     archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+                        }
+                     }
+          
        
              }
         }
