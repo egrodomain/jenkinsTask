@@ -13,9 +13,9 @@ pipeline {
                      }
             stage('Maven Build') {
                 steps {
-                    sh "ls -lart"    
+                    
                     sh "mvn clean install"
-                    sh "ls -lart target"
+                   
                          }
                      }
        
